@@ -1,0 +1,198 @@
+/* --- HOME ----------*/
+/* https://cssgradient.io/ */
+.home-body {
+  background: rgb(33, 33, 33);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(239, 209, 164, 1) 0%,
+    rgba(33, 33, 33, 1) 50%,
+    rgba(33, 33, 33, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(239, 209, 164, 1) 0%,
+    rgba(33, 33, 33, 1) 50%,
+    rgba(33, 33, 33, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(239, 209, 164, 1) 0%,
+    rgba(33, 33, 33, 1) 50%,
+    rgba(33, 33, 33, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#212121",endColorstr="#efd1a4",GradientType=1);
+  height: 100vh;
+}
+
+.hero-dark {
+  align-items: center; /* Centrar en vertical */
+  background-image: url("./../../assets/pictures/images/hero-dark-big.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 48px;
+  min-height: 600px;
+  padding: 0 20px;
+  text-align: center;
+  z-index: 0;
+
+  @include respond-to("medium") {
+    background-image: url("./../../assets/pictures/images/hero-dark-med.jpg");
+  }
+
+  @include respond-to("small") {
+    background-image: url("./../../assets/pictures/images/hero-dark-small.jpg");
+  }
+}
+
+.hero {
+  align-items: center; /* Centrar en vertical */
+  background-color: transparent;
+  background-image: url("./../../assets/pictures/images/hero-big.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(
+    20% 0,
+    0% 100%,
+    21% 100%,
+    0 70%,
+    100% 65%,
+    100% 70%,
+    35% 81%,
+    100% 75%,
+    100% 83%,
+    79% 0
+  );
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Repartiendo */
+  min-height: 600px;
+  text-align: center;
+  z-index: 1;
+
+  @include respond-to("medium") {
+    background-image: url("./../../assets/pictures/images/hero-med.jpg");
+  }
+
+  @include respond-to("small") {
+    background-image: url("./../../assets/pictures/images/hero-small.jpg");
+  }
+
+  &__h1 {
+    color: map-get($colors, "secondary");
+    flex: 1;
+    font-family: $font-titles;
+    font-size: 8em;
+    opacity: 0.9;
+    text-shadow: 0 16px 24px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+  }
+}
+
+.hero:hover {
+  transition: all 0.5s ease-in-out;
+  clip-path: polygon(
+    9% 0,
+    8% 100%,
+    0 100%,
+    1% 64%,
+    100% 60%,
+    100% 70%,
+    100% 76%,
+    100% 100%,
+    86% 100%,
+    100% 0
+  );
+}
+
+.home-nav {
+  align-items: center;
+  display: flex;
+  flex: 1 0 100%;
+  justify-content: center;
+  list-style: none;
+  margin: -120px auto 0;
+  padding: 0;
+  width: 100%;
+  z-index: 50;
+
+  @include respond-to("medium") {
+    flex-direction: column;
+  }
+
+  @include respond-to("small") {
+    flex-direction: row;
+  }
+
+  &__ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__li {
+    background-color: map-get($colors, "secondary");
+    border-radius: 24px;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.6);
+    display: flex;
+    font-weight: bold;
+    margin: 0 10px; /* Add spacing between items */
+    text-align: center;
+    text-transform: uppercase;
+
+    @include respond-to("medium") {
+      margin-bottom: 10px; // Uno encima de otro
+    }
+  }
+
+  &__li:hover {
+    background-color: map-get($colors, "primary");
+    box-shadow: 0 20px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  a {
+    color: map-get($colors, "bg");
+
+    font-size: 1em;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Efecto hover effect */
+  }
+
+  &__li:first-child {
+    list-style-type: none;
+  }
+}
+
+// Asegura la responsividad con media queries
+@include respond-to("medium") {
+  .hero {
+    &__h1 {
+      display: block;
+      font-size: 4em;
+    }
+  }
+
+  .section {
+    padding: $padding-section * 0.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: $base-font-size * 1.5;
+  }
+}
+
+@include respond-to("small") {
+  .hero {
+    &__h1 {
+      display: block;
+      font-size: 2em;
+    }
+  }
+}
