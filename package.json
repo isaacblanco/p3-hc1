@@ -4,12 +4,12 @@
   "private": true,
   "description": "Pec P3 - Html y CSS I - 2024s2",
   "scripts": {
-    "parcel:serve": "parcel src/index.html -p 8123 --config ./.parcelrc --target web --open",
-    "parcel:build": "parcel build src/index.html --config ./.parcelrc --target web --no-source-maps --no-cache",
+    "parcel:serve": "parcel serve src/index.html -p 8123 --target web --open",
+    "parcel:build": "parcel build src/index.html --target web --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
+    "test": "echo 'Everything is working as expected ✅\\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
     "stylelint": "stylelint \"src/**/*.scss\""
   },
   "keywords": [

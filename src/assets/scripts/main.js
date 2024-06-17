@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function () {
   function addPreloadLink(href) {
     var link = document.createElement("link");
@@ -54,3 +55,5 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", lazyLoad);
   }
 });
+
+*/
