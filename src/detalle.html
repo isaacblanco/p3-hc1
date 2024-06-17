@@ -31,8 +31,65 @@
         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       />
     </noscript>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function addPreloadLink(href) {
+          var link = document.createElement("link");
+          link.rel = "preload";
+          link.as = "image";
+          link.href = href;
+          link.type = "image/webp";
+          link.setAttribute("fetchpriority", "high");
+          document.head.appendChild(link);
+        }
+
+        if (window.innerWidth < 768) {
+          addPreloadLink(
+            "../src/assets/pictures/images/hero-small.c999baf5.webp"
+          );
+          addPreloadLink(
+            "../src/assets/pictures/images/hero-dark-small.5f142428.webp"
+          );
+        } else {
+          addPreloadLink(
+            "../src/assets/pictures/images/hero-big.daf83d20.webp"
+          );
+          addPreloadLink(
+            "../src/assets/pictures/images/hero-dark-big.9c6afaa7.webp"
+          );
+        }
+      });
+    </script>
+    <script defer>
+      function init() {
+        // Vídeo youtube
+        let srcVideo = `<iframe
+                width="640"
+                height="360"
+                src="https://www.youtube-nocookie.com/embed/fpUpVznI4Yc?si=zrc4OJ2tIoPmN6IP"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>`;
+        document.getElementById("video").innerHTML = srcVideo;
+
+        // Spotify
+        let srcSpotify = `<iframe
+              class="iframe-spotify"
+              title="Spotify Embed: Divisive"
+              style="border-radius: 12px"
+              height="380"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              src="https://open.spotify.com/embed/album/592wLCECATlzgwiEWTOPEa?utm_source=oembed"
+            ></iframe>`;
+        document.getElementById("spotify").innerHTML = srcSpotify;
+      }
+    </script>
   </head>
-  <body>
+  <body onload="init()">
     <include src="./views/header.html"></include>
 
     <div class="album-cover">
@@ -113,18 +170,7 @@
             </div>
           </section>
 
-          <section class="text-center">
-            <iframe
-              class="iframe-spotify"
-              title="Spotify Embed: Divisive"
-              style="border-radius: 12px"
-              height="380"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-              src="https://open.spotify.com/embed/album/592wLCECATlzgwiEWTOPEa?utm_source=oembed"
-            ></iframe>
-          </section>
+          <section id="spotify" class="text-center"></section>
 
           <section class="section">
             <div class="efecto-ani">
@@ -159,17 +205,7 @@
               />
             </div>
 
-            <div class="video-container">
-              <iframe
-                width="640"
-                height="360"
-                src="https://www.youtube-nocookie.com/embed/fpUpVznI4Yc?si=zrc4OJ2tIoPmN6IP"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
+            <div id="video" class="video-container"></div>
 
             <div class="page-nav-buttons">
               <button>&laquo; Anterior</button>

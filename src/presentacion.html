@@ -7,9 +7,75 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      />
+    </noscript>
     <link rel="icon" type="image/svg" href="./assets/images/favicon.svg" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function addPreloadLink(href) {
+          var link = document.createElement("link");
+          link.rel = "preload";
+          link.as = "image";
+          link.href = href;
+          link.type = "image/webp";
+          link.setAttribute("fetchpriority", "high");
+          document.head.appendChild(link);
+        }
+
+        if (window.innerWidth < 768) {
+          addPreloadLink(
+            "../src/assets/pictures/images/hero-small.c999baf5.webp"
+          );
+          addPreloadLink(
+            "../src/assets/pictures/images/hero-dark-small.5f142428.webp"
+          );
+        } else {
+          addPreloadLink(
+            "../src/assets/pictures/images/hero-big.daf83d20.webp"
+          );
+          addPreloadLink(
+            "../src/assets/pictures/images/hero-dark-big.9c6afaa7.webp"
+          );
+        }
+      });
+    </script>
+    <script defer>
+      function init() {
+        let strVideo = `<iframe
+              width="640"
+              height="360"
+              src="https://www.youtube-nocookie.com/embed/u9Dg-g7t2l4?si=Vsduy50lNnZysrUa"
+              title="Disturbed - The Sound Of Silence"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>`;
+        document.getElementById("video").innerHTML = strVideo;
+      }
+    </script>
   </head>
-  <body>
+  <body onload="init()">
     <include src="./views/header.html"></include>
 
     <main class="main">
@@ -169,17 +235,7 @@
               </div>
             </div>
           </div>
-          <div class="video-container">
-            <iframe
-              width="640"
-              height="360"
-              src="https://www.youtube-nocookie.com/embed/u9Dg-g7t2l4?si=Vsduy50lNnZysrUa"
-              title="Disturbed - The Sound Of Silence"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
+          <div id="video" class="video-container"></div>
         </section>
         <section class="section">
           <h2 class="section__h2">Historia</h2>
