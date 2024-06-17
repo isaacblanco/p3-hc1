@@ -26,7 +26,7 @@
 
 .hero-dark {
   align-items: center; /* Centrar en vertical */
-  background-image: url("./../../assets/pictures/images/hero-dark-big.jpg");
+  background-image: url("./../../assets/pictures/images/hero-dark-big.webp");
   background-size: cover;
   background-position: center;
   margin-bottom: 48px;
@@ -36,18 +36,18 @@
   z-index: 0;
 
   @include respond-to("medium") {
-    background-image: url("./../../assets/pictures/images/hero-dark-med.jpg");
+    background-image: url("./../../assets/pictures/images/hero-dark-med.webp");
   }
 
   @include respond-to("small") {
-    background-image: url("./../../assets/pictures/images/hero-dark-small.jpg");
+    background-image: url("./../../assets/pictures/images/hero-dark-small.webp");
   }
 }
 
 .hero {
   align-items: center; /* Centrar en vertical */
   background-color: transparent;
-  background-image: url("./../../assets/pictures/images/hero-big.jpg");
+  background-image: url("./../../assets/pictures/images/hero-big.webp");
   background-size: cover;
   background-position: center;
   clip-path: polygon(
@@ -70,11 +70,11 @@
   z-index: 1;
 
   @include respond-to("medium") {
-    background-image: url("./../../assets/pictures/images/hero-med.jpg");
+    background-image: url("./../../assets/pictures/images/hero-med.webp");
   }
 
   @include respond-to("small") {
-    background-image: url("./../../assets/pictures/images/hero-small.jpg");
+    background-image: url("./../../assets/pictures/images/hero-small.webp");
   }
 
   &__h1 {

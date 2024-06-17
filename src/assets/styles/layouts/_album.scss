@@ -1,5 +1,5 @@
 .album-cover {
-  background-image: url("./../../assets/images/disturbed-divisive-big.jpg");
+  background-image: url("./../../assets/images/disturbed-divisive-big.webp");
   background-size: cover;
   background-position: center;
   margin-bottom: 48px;
@@ -8,12 +8,12 @@
   text-align: center;
 
   @include respond-to("medium") {
-    background-image: url("./../../assets/images/disturbed-divisive-med.jpg");
+    background-image: url("./../../assets/images/disturbed-divisive-med.webp");
     min-height: 280px;
   }
 
   @include respond-to("small") {
-    background-image: url("./../../assets/images/disturbed-divisive-small.jpg");
+    background-image: url("./../../assets/images/disturbed-divisive-small.webp");
     min-height: 200px;
   }
 }

@@ -2,7 +2,7 @@
 
 .header {
   align-items: center; /* Centrar en vertical */
-  background-image: url("./../../assets/pictures/images/hero-dark-big.jpg");
+  background-image: url("./../../assets/pictures/images/hero-dark-big.webp");
   background-size: cover;
   background-position: top;
   display: flex;
@@ -13,10 +13,10 @@
   text-align: center;
 
   @include respond-to("medium") {
-    background-image: url("./../../assets/pictures/images/hero-dark-med.jpg");
+    background-image: url("./../../assets/pictures/images/hero-dark-med.webp");
   }
   @include respond-to("small") {
-    background-image: url("./../../assets/pictures/images/hero-dark-small.jpg");
+    background-image: url("./../../assets/pictures/images/hero-dark-small.webp");
   }
 
   &__h1 {

@@ -6,8 +6,31 @@
     <title>Detalle</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" data-src="./assets/images/favicon.svg" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <link rel="icon" type="image/svg" href="./assets/images/favicon.svg" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      />
+    </noscript>
   </head>
   <body>
     <include src="./views/header.html"></include>
@@ -52,15 +75,16 @@
                 <picture>
                   <source
                     media="(max-width: 728px)"
-                    srcset="./assets/pictures/albums/divisive-med.jpg"
+                    data-srcset="./assets/pictures/albums/divisive-med.webp"
                   />
                   <source
                     media="(min-width: 420px)"
-                    srcset="./assets/pictures/albums/divisive-small.jpg"
+                    data-srcset="./assets/pictures/albums/divisive-small.webp"
                   />
                   <img
-                    src="./assets/pictures/albums/divisive-big.jpg"
+                    data-src="./assets/pictures/albums/divisive-big.webp"
                     alt="Album - Divisive"
+                    class="lazy"
                   />
                 </picture>
               </div>
@@ -104,30 +128,30 @@
           <section class="section">
             <div class="efecto-ani">
               <img
-                class="image-ani"
-                srcset="
-                  ./assets/images/disturbed-band-small.jpg  420w,
-                  ./assets/images/disturbed-band-med.jpg    728w,
-                  ./assets/images/disturbed-band-big.jpg   1200w
+                class="image-ani lazy"
+                data-srcset="
+                  ./assets/images/disturbed-band-small.webp  420w,
+                  ./assets/images/disturbed-band-med.webp    728w,
+                  ./assets/images/disturbed-band-big.webp   1200w
                 "
                 sizes="(max-width: 420px) 420px,
                     (max-width: 728px) 728px,
                     1200px"
-                src="./assets/images/disturbed-band-big.jpg"
+                data-src="./assets/images/disturbed-band-big.webp"
                 alt="Disturbed - Band"
               />
 
               <img
-                class="image-ani"
-                srcset="
-                  ./assets/images/disturbed-2022-small.jpg  420w,
-                  ./assets/images/disturbed-2022-med.jpg    728w,
-                  ./assets/images/disturbed-2022-big.jpg   1200w
+                class="image-ani lazy"
+                data-srcset="
+                  ./assets/images/disturbed-2022-small.webp  420w,
+                  ./assets/images/disturbed-2022-med.webp    728w,
+                  ./assets/images/disturbed-2022-big.webp   1200w
                 "
                 sizes="(max-width: 420px) 420px,
                     (max-width: 728px) 728px,
                     1200px"
-                src="./assets/images/disturbed-2022-big.jpg"
+                data-src="./assets/images/disturbed-2022-big.webp"
                 alt="Disturbed - Camiseta"
               />
             </div>

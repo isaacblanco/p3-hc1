@@ -6,12 +6,35 @@
     <title>Categoría</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" data-src="./assets/images/favicon.svg" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <link rel="icon" type="image/svg" href="./assets/images/favicon.svg" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      />
+    </noscript>
   </head>
   <body>
     <div style="display: none">
-      <img src="./assets/pictures/albums/divisive-big.jpg" alt="" />
+      <img data-src="./assets/pictures/albums/divisive-big.webp" alt="" />
     </div>
 
     <include src="./views/header.html"></include>
@@ -70,160 +93,170 @@
           <div id="albums">
             <div class="cat-album">
               <img
-                srcset="
-                  ./assets/pictures/albums/divisive-small.jpg  420w,
-                  ./assets/pictures/albums/divisive-med.jpg    728w,
-                  ./assets/pictures/albums/divisive-big.jpg   1200w
-                "
+                data-srcset="
+              ./assets/pictures/albums/divisive-small.webp  420w,
+              ./assets/pictures/albums/divisive-med.webp    728w,
+              ./assets/pictures/albums/divisive-big.webp   1200w
+            "
                 sizes="(max-width: 420px) 420px,
-                      (max-width: 728px) 728px,
-                      1200px"
-                src="./assets/pictures/albums/divisive-big.jpg"
+                  (max-width: 728px) 728px,
+                  1200px"
+                data-src="./assets/pictures/albums/divisive-big.webp"
                 alt="Cover of Divisive"
+                class="lazy"
               />
               <h3>Divisive</h3>
               <p>2022</p>
             </div>
             <div class="cat-album">
               <img
-                srcset="
-                  ./assets/pictures/albums/evolution-small.jpg  420w,
-                  ./assets/pictures/albums/evolution-med.jpg    728w,
-                  ./assets/pictures/albums/evolution-big.jpg   1200w
-                "
+                data-srcset="
+              ./assets/pictures/albums/evolution-small.webp  420w,
+              ./assets/pictures/albums/evolution-med.webp    728w,
+              ./assets/pictures/albums/evolution-big.webp   1200w
+            "
                 sizes="(max-width: 420px) 420px,
-                      (max-width: 728px) 728px,
-                      1200px"
-                src="./assets/pictures/albums/evolution-big.jpg"
+                  (max-width: 728px) 728px,
+                  1200px"
+                data-src="./assets/pictures/albums/evolution-big.webp"
                 alt="Cover of Evolution"
+                class="lazy"
               />
               <h3>Evolution</h3>
               <p>2018</p>
             </div>
             <div class="cat-album">
               <img
-                srcset="
-                  ./assets/pictures/albums/immortalized-small.jpg  420w,
-                  ./assets/pictures/albums/immortalized-med.jpg    728w,
-                  ./assets/pictures/albums/immortalized-big.jpg   1200w
-                "
+                data-srcset="
+              ./assets/pictures/albums/immortalized-small.webp  420w,
+              ./assets/pictures/albums/immortalized-med.webp    728w,
+              ./assets/pictures/albums/immortalized-big.webp   1200w
+            "
                 sizes="(max-width: 420px) 420px,
-                      (max-width: 728px) 728px,
-                      1200px"
-                src="./assets/pictures/albums/immortalized-big.jpg"
+                  (max-width: 728px) 728px,
+                  1200px"
+                data-src="./assets/pictures/albums/immortalized-big.webp"
                 alt="Cover of Immortalized"
+                class="lazy"
               />
               <h3>Immortalized</h3>
               <p>2015</p>
             </div>
             <div class="cat-album">
               <img
-                srcset="
-                  ./assets/pictures/albums/TheLostChildren-small.jpg  420w,
-                  ./assets/pictures/albums/TheLostChildren-med.jpg    728w,
-                  ./assets/pictures/albums/TheLostChildren-big.jpg   1200w
-                "
+                data-srcset="
+              ./assets/pictures/albums/TheLostChildren-small.webp  420w,
+              ./assets/pictures/albums/TheLostChildren-med.webp    728w,
+              ./assets/pictures/albums/TheLostChildren-big.webp   1200w
+            "
                 sizes="(max-width: 420px) 420px,
-                    (max-width: 728px) 728px,
-                    1200px"
-                src="./assets/pictures/albums/TheLostChildren-big.jpg"
+                (max-width: 728px) 728px,
+                1200px"
+                data-src="./assets/pictures/albums/TheLostChildren-big.webp"
                 alt="Cover of The Lost Children"
+                class="lazy"
               />
               <h3>The Lost Children</h3>
               <p>2011</p>
             </div>
             <div class="cat-album">
               <img
-                srcset="
-                  ./assets/pictures/albums/studio-album-collection-small.jpg  420w,
-                  ./assets/pictures/albums/studio-album-collection-med.jpg    728w,
-                  ./assets/pictures/albums/studio-album-collection-big.jpg   1200w
-                "
+                data-srcset="
+              ./assets/pictures/albums/studio-album-collection-small.webp  420w,
+              ./assets/pictures/albums/studio-album-collection-med.webp    728w,
+              ./assets/pictures/albums/studio-album-collection-big.webp   1200w
+            "
                 sizes="(max-width: 420px) 420px,
-                    (max-width: 728px) 728px,
-                    1200px"
-                src="./assets/pictures/albums/studio-album-collection-big.jpg"
+                (max-width: 728px) 728px,
+                1200px"
+                data-src="./assets/pictures/albums/studio-album-collection-big.webp"
                 alt="Cover of The Studio Album Collection"
+                class="lazy"
               />
               <h3>The Studio Album Collection</h3>
               <p>2011</p>
             </div>
             <div class="cat-album">
               <img
-                srcset="
-                  ./assets/pictures/albums/asylum-small.jpg  420w,
-                  ./assets/pictures/albums/asylum-med.jpg    728w,
-                  ./assets/pictures/albums/asylum-big.jpg   1200w
-                "
+                data-srcset="
+              ./assets/pictures/albums/asylum-small.webp  420w,
+              ./assets/pictures/albums/asylum-med.webp    728w,
+              ./assets/pictures/albums/asylum-big.webp   1200w
+            "
                 sizes="(max-width: 420px) 420px,
-                    (max-width: 728px) 728px,
-                    1200px"
-                src="./assets/pictures/albums/asylum-big.jpg"
+                (max-width: 728px) 728px,
+                1200px"
+                data-src="./assets/pictures/albums/asylum-big.webp"
                 alt="Cover of Asylum"
+                class="lazy"
               />
               <h3>Asylum</h3>
               <p>2010</p>
             </div>
             <div class="cat-album">
               <img
-                srcset="
-                  ./assets/pictures/albums/indestructible-small.jpg  420w,
-                  ./assets/pictures/albums/indestructible-med.jpg    728w,
-                  ./assets/pictures/albums/indestructible-big.jpg   1200w
-                "
+                data-srcset="
+              ./assets/pictures/albums/indestructible-small.webp  420w,
+              ./assets/pictures/albums/indestructible-med.webp    728w,
+              ./assets/pictures/albums/indestructible-big.webp   1200w
+            "
                 sizes="(max-width: 420px) 420px,
-                    (max-width: 728px) 728px,
-                    1200px"
-                src="./assets/pictures/albums/indestructible-big.jpg"
+                (max-width: 728px) 728px,
+                1200px"
+                data-src="./assets/pictures/albums/indestructible-big.webp"
                 alt="Cover of Indestructible"
+                class="lazy"
               />
               <h3>Indestructible</h3>
               <p>2008</p>
             </div>
             <div class="cat-album">
               <img
-                srcset="
-                  ./assets/pictures/albums/Ten_Thousand_Fists-small.jpg  420w,
-                  ./assets/pictures/albums/Ten_Thousand_Fists-med.jpg    728w,
-                  ./assets/pictures/albums/Ten_Thousand_Fists-big.jpg   1200w
-                "
+                data-srcset="
+              ./assets/pictures/albums/Ten_Thousand_Fists-small.webp  420w,
+              ./assets/pictures/albums/Ten_Thousand_Fists-med.webp    728w,
+              ./assets/pictures/albums/Ten_Thousand_Fists-big.webp   1200w
+            "
                 sizes="(max-width: 420px) 420px,
-                    (max-width: 728px) 728px,
-                    1200px"
-                src="./assets/pictures/albums/Ten_Thousand_Fists-big.jpg"
+                (max-width: 728px) 728px,
+                1200px"
+                data-src="./assets/pictures/albums/Ten_Thousand_Fists-big.webp"
                 alt="Cover of Ten Thousand Fists"
+                class="lazy"
               />
               <h3>Ten Thousand Fists</h3>
               <p>2005</p>
             </div>
             <div class="cat-album">
               <img
-                srcset="
-                  ./assets/pictures/albums/believe-small.jpg  420w,
-                  ./assets/pictures/albums/believe-med.jpg    728w,
-                  ./assets/pictures/albums/believe-big.jpg   1200w
-                "
+                data-srcset="
+              ./assets/pictures/albums/believe-small.webp  420w,
+              ./assets/pictures/albums/believe-med.webp    728w,
+              ./assets/pictures/albums/believe-big.webp   1200w
+            "
                 sizes="(max-width: 420px) 420px,
-                    (max-width: 728px) 728px,
-                    1200px"
-                src="./assets/pictures/albums/believe-big.jpg"
+                (max-width: 728px) 728px,
+                1200px"
+                data-src="./assets/pictures/albums/believe-big.webp"
                 alt="Cover of Believe"
+                class="lazy"
               />
               <h3>Believe</h3>
               <p>2002</p>
             </div>
             <div class="cat-album">
               <img
-                srcset="
-                  ./assets/pictures/albums/TheSickness-small.jpg  420w,
-                  ./assets/pictures/albums/TheSickness-med.jpg    728w,
-                  ./assets/pictures/albums/TheSickness-big.jpg   1200w
-                "
+                data-srcset="
+              ./assets/pictures/albums/TheSickness-small.webp  420w,
+              ./assets/pictures/albums/TheSickness-med.webp    728w,
+              ./assets/pictures/albums/TheSickness-big.webp   1200w
+            "
                 sizes="(max-width: 420px) 420px,
-                    (max-width: 728px) 728px,
-                    1200px"
-                src="./assets/pictures/albums/TheSickness-big.jpg"
+                (max-width: 728px) 728px,
+                1200px"
+                data-src="./assets/pictures/albums/TheSickness-big.webp"
                 alt="Cover of The Sickness"
+                class="lazy"
               />
               <h3>The Sickness</h3>
               <p>2000</p>
@@ -234,8 +267,6 @@
     </main>
 
     <include src="./views/footer.html"></include>
-
-    <script src="./assets/scripts/data.js"></script>
-    <script type="module" src="./assets/scripts/main.js"></script>
+    <script defer type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>
