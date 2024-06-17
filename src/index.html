@@ -32,20 +32,25 @@
       />
     </noscript>
     <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
-    <link
-      rel="preload"
-      fetchpriority="high"
-      as="image"
-      href="../src/assets/pictures/images/hero-big.webp"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      fetchpriority="high"
-      as="image"
-      href="../src/assets/pictures/images/hero-small.webp"
-      type="image/webp"
-    />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function addPreloadLink(href) {
+          var link = document.createElement("link");
+          link.rel = "preload";
+          link.as = "image";
+          link.href = href;
+          link.type = "image/webp";
+          link.setAttribute("fetchpriority", "high");
+          document.head.appendChild(link);
+        }
+
+        if (window.innerWidth < 768) {
+          addPreloadLink("../src/assets/pictures/images/hero-small.webp");
+        } else {
+          addPreloadLink("../src/assets/pictures/images/hero-big.webp");
+        }
+      });
+    </script>
   </head>
   <body class="home-body">
     <main style="overflow: hidden">

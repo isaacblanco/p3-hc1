@@ -1,11 +1,11 @@
 {
-  "name": "p2-hc1",
+  "name": "p3-hc1",
   "version": "1.0.0",
   "private": true,
-  "description": "Pec P2 - Html y CSS I - 2024s2",
+  "description": "Pec P3 - Html y CSS I - 2024s2",
   "scripts": {
-    "parcel:serve": "parcel src/index.html -p 8123 --target web --open",
-    "parcel:build": "parcel build src/index.html --target web --no-source-maps --no-cache",
+    "parcel:serve": "parcel src/index.html -p 8123 --config ./.parcelrc --target web --open",
+    "parcel:build": "parcel build src/index.html --config ./.parcelrc --target web --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
@@ -13,7 +13,7 @@
     "stylelint": "stylelint \"src/**/*.scss\""
   },
   "keywords": [
-    "P2",
+    "P3",
     "Html & CSS I",
     "2024s2"
   ],
@@ -31,9 +31,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isaacblanco/p2-hc1.git"
+    "url": "git+https://github.com/isaacblanco/p3-hc1.git"
   },
-  "homepage": "https://p2-htmlcssi-ibp.netlify.app/",
+  "homepage": "https://isaacblanco.com/UOC/MASTER/hc1/p3/index.html",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.11.0",
     "autoprefixer": "^10.4.15",
